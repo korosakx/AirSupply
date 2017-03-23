@@ -10,7 +10,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>AirSupply | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -202,17 +202,7 @@
               </li>
               <!-- Menu Body -->
               <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
+                
                 <!-- /.row -->
               </li>
               <!-- Menu Footer-->
@@ -311,14 +301,14 @@
             
           </ul>
         </li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>PO Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu menu-open" style="display: block;">
+          <ul class="treeview-menu" style="display: none;">
             <li><a href="#"><i class="fa fa-circle-o"></i>PO Upload</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Negociations</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>History</a></li>
@@ -379,7 +369,34 @@
     <!-- Main content -->
     <section class="content">
       <!-- Info boxes -->
-      
+      <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Upload Purshase Order</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                
+                
+                <div class="form-group">
+                  <label for="exampleInputFile">Choose file :</label>
+                  <input type="file" id="exampleInputFile">
+
+                  
+                </div>
+                	
+				
+				
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+
       <!-- /.row -->
 
       <div class="row">
@@ -390,9 +407,1705 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
-
-      <!-- Main row -->
-      
+   
+     
+      <!-- Tableau -->
+   <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title">Purchase Order List</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+               <tr>
+						<th>PO</th>
+						<th>PO Header Pub. Date</th>
+						<th>PO Header Last Mod. Date</th>
+						<th>PO Document type</th>
+						<th>Supplier Local Number</th>
+						<th>Customer Name</th>
+						<th>Customer Street 1</th>
+						<th>Customer Zip</th>
+						<th>Customer City</th>
+						<th>Customer Countrycode</th>
+						<th>Supplier Name</th>
+						<th>Supplier Street 1</th>
+						<th>Supplier Zip</th>
+						<th>Supplier City</th>
+						<th>Supplier Countrycode</th>
+						<th>Payment terms</th>
+						<th>Payment terms code</th>
+						<th>ERP creation date</th>
+						<th>Currency</th>
+						<th>Supp. No.</th>
+						<th>PO Header Creation Date</th>
+						<th>PO Line</th>
+						<th>Status</th>
+						<th>Customer Material Number</th>
+						<th>Customer Material Description</th>
+						<th>Supplier Material Number</th>
+						<th>Supplier Material Description</th>
+						<th>Unit of Measure</th>
+						<th>Requested date</th>
+						<th>Requested quantity</th>
+						<th>Promised date</th>
+						<th>Promised quantity</th>
+						<th>Received Quantity</th>
+						<th>Remaining Quantity to be Received</th>
+						<th>Last GR Date</th>
+						<th>Last GR No.</th>
+						<th>Original Price</th>
+						<th>Price</th>
+						<th>Price unit of measure</th>
+						<th>Currency</th>
+						<th>Total Line Amount</th>
+					</tr>
+                </thead>
+                <tbody>
+                
+					<tr>
+						<td>R8441256</td>
+						<td>2017-03-09 11:11:17</td>
+						<td>2017-03-09 11:11:17</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-03-09 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-03-09 11:11:17</td>
+						<td>10</td>
+						<td>NEW ORDER PUBLISHED</td>
+						<td>FR_D5713408820200</td>
+						<td>RENFORT AVANT</td>
+						<td>D5713408820200</td>
+						<td>RENFORT AVANT</td>
+						<td>PCE</td>
+						<td>2017-04-10 23:59:59</td>
+						<td>1</td>
+						<td>2017-04-10 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8441255</td>
+						<td>2017-03-09 11:12:03</td>
+						<td>2017-03-09 11:12:03</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-03-09 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-03-09 11:12:03</td>
+						<td>10</td>
+						<td>NEW ORDER PUBLISHED</td>
+						<td>FR_D5713408820200</td>
+						<td>RENFORT AVANT</td>
+						<td>D5713408820200</td>
+						<td>RENFORT AVANT</td>
+						<td>PCE</td>
+						<td>2017-04-10 23:59:59</td>
+						<td>1</td>
+						<td>2017-04-10 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8331342</td>
+						<td>2017-01-24 13:40:29</td>
+						<td>2017-03-09 15:15:37</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-24 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-24 13:40:29</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_F5791048200200</td>
+						<td>47-SUPPORT EQUIPE</td>
+						<td>F5791048200200</td>
+						<td>47-SUPPORT EQUIPE_GM8SE_MET</td>
+						<td>PCE</td>
+						<td>2017-02-23 23:59:59</td>
+						<td>1</td>
+						<td>2017-02-23 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>6865005</td>
+						<td>2016-08-08 10:56:07</td>
+						<td>2017-02-23 10:46:07</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-08-08 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-08-08 10:56:07</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5392627500400</td>
+						<td>EQUIPPED BRACKET</td>
+						<td>V5392627500400</td>
+						<td>EQUIPPED BRACKET</td>
+						<td>PCE</td>
+						<td>2017-03-08 23:59:59</td>
+						<td>4</td>
+						<td>2017-03-08 23:59:59</td>
+						<td>4</td>
+						<td>0</td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td>1132</td>
+						<td>1132</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>4528</td>
+					</tr>
+					<tr>
+						<td>7244037</td>
+						<td>2016-11-21 15:32:39</td>
+						<td>2017-03-03 11:13:51</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-11-21 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-11-21 15:32:39</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713440020000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>D5713440020000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>PCE</td>
+						<td>2017-03-09 23:59:59</td>
+						<td>5</td>
+						<td>2017-03-09 23:59:59</td>
+						<td>5</td>
+						<td>0</td>
+						<td>5</td>
+						<td></td>
+						<td></td>
+						<td>197</td>
+						<td>197</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>985</td>
+					</tr>
+					<tr>
+						<td>R8339211</td>
+						<td>2017-01-26 14:21:14</td>
+						<td>2017-03-01 09:49:18</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-26 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-26 14:21:14</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_F5711030500800</td>
+						<td>FERRURE BIELLE C42</td>
+						<td>F5711030500800</td>
+						<td>FERRURE BIELLE C42</td>
+						<td>PCE</td>
+						<td>2017-03-09 23:59:59</td>
+						<td>3</td>
+						<td>2017-03-09 23:59:59</td>
+						<td>3</td>
+						<td>0</td>
+						<td>3</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>7484465</td>
+						<td>2017-01-26 13:17:30</td>
+						<td>2017-03-08 16:47:44</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-26 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-26 13:17:30</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5791412900000</td>
+						<td>SUPPORT USINE</td>
+						<td>D5791412900000</td>
+						<td>SUPPORT USINE</td>
+						<td>PCE</td>
+						<td>2017-03-10 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-10 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>424</td>
+						<td>424</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>848</td>
+					</tr>
+					<tr>
+						<td>7460591</td>
+						<td>2017-01-20 11:39:00</td>
+						<td>2017-03-10 10:12:09</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-20 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-20 11:39:00</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5791412020000</td>
+						<td>SUPPORT USINE</td>
+						<td>D5791412020000</td>
+						<td>SUPPORT USINE</td>
+						<td>PCE</td>
+						<td>2017-03-13 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-13 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>362</td>
+						<td>362</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>724</td>
+					</tr>
+					<tr>
+						<td>R8379002</td>
+						<td>2017-02-13 15:35:04</td>
+						<td>2017-02-16 13:56:23</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-13 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-13 15:35:04</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_L5331029700000</td>
+						<td>FER.BIELLE HZ C56</td>
+						<td>L5331029700000</td>
+						<td>FER.BIELLE HZ C56_GM8SE_MLN_OLD</td>
+						<td>PCE</td>
+						<td>2017-03-13 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-13 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>6825185</td>
+						<td>2016-07-18 15:28:40</td>
+						<td>2017-03-09 10:28:25</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-07-18 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-24 11:48:36</td>
+						<td>30</td>
+						<td>OPEN</td>
+						<td>FR_V5332608600600</td>
+						<td>FERRURE MARCHEPIED EQ</td>
+						<td>V5332608600600</td>
+						<td>FERRURE MARCHEPIED EQ</td>
+						<td>PCE</td>
+						<td>2017-03-13 23:59:59</td>
+						<td>8</td>
+						<td>2017-03-13 23:59:59</td>
+						<td>8</td>
+						<td>0</td>
+						<td>8</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>265</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>2120</td>
+					</tr>
+					<tr>
+						<td>6697817</td>
+						<td>2016-06-14 14:24:46</td>
+						<td>2017-02-23 10:46:04</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-06-14 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-06-14 14:24:46</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5392633700200</td>
+						<td>EQUIPPED BRACKET</td>
+						<td>V5392633700200</td>
+						<td>EQUIPPED BRACKET</td>
+						<td>PCE</td>
+						<td>2017-03-14 23:59:59</td>
+						<td>4</td>
+						<td>2017-03-14 23:59:59</td>
+						<td>4</td>
+						<td>0</td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td>1132</td>
+						<td>1132</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>4528</td>
+					</tr>
+					<tr>
+						<td>7062955</td>
+						<td>2016-10-04 10:12:57</td>
+						<td>2017-02-23 10:46:57</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-10-04 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-10-04 10:12:57</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5392097800400</td>
+						<td>FERR.AR.RESERV.JAUNE</td>
+						<td>V5392097800400</td>
+						<td>FERR.AR.RESERV.JAUNE</td>
+						<td>PCE</td>
+						<td>2017-03-15 23:59:59</td>
+						<td>6</td>
+						<td>2017-03-15 23:59:59</td>
+						<td>6</td>
+						<td>0</td>
+						<td>6</td>
+						<td></td>
+						<td></td>
+						<td>1132</td>
+						<td>1132</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>6792</td>
+					</tr>
+					<tr>
+						<td>7257607</td>
+						<td>2016-11-23 17:39:38</td>
+						<td>2017-03-09 10:26:01</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-11-23 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-11-23 17:39:38</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713440120000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>D5713440120000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>5</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>5</td>
+						<td>0</td>
+						<td>5</td>
+						<td></td>
+						<td></td>
+						<td>231</td>
+						<td>231</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>1155</td>
+					</tr>
+					<tr>
+						<td>R8322823</td>
+						<td>2017-01-25 09:45:44</td>
+						<td>2017-02-09 11:53:05</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-25 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-25 09:45:44</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711044500200</td>
+						<td>FERRURE BIELLE 1 EQ</td>
+						<td>V5711044500200</td>
+						<td>FERRURE BIELLE 1 EQ_GM218_8FV</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8321410</td>
+						<td>2017-01-25 09:36:42</td>
+						<td>2017-02-09 11:53:05</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-25 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-25 09:36:42</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711044500200</td>
+						<td>FERRURE BIELLE 1 EQ</td>
+						<td>V5711044500200</td>
+						<td>FERRURE BIELLE 1 EQ_GM218_8FV</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8375509</td>
+						<td>2017-02-10 10:49:02</td>
+						<td>2017-03-10 09:04:45</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-10 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-10 10:49:02</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713204620102</td>
+						<td>FERRURE CADRE OBLIQ.</td>
+						<td>D5713204620102</td>
+						<td>FERRURE CADRE OBLIQ._GM218_8E5</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>4</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>4</td>
+						<td>0</td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>7231558</td>
+						<td>2016-11-17 10:46:21</td>
+						<td>2017-03-09 10:26:01</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-11-17 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-11-17 10:46:21</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713440020000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>D5713440020000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>14</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>14</td>
+						<td>0</td>
+						<td>14</td>
+						<td></td>
+						<td></td>
+						<td>197</td>
+						<td>197</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>2758</td>
+					</tr>
+					<tr>
+						<td>7419391</td>
+						<td>2017-01-11 09:00:13</td>
+						<td>2017-01-17 10:27:04</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-11 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-11 09:00:13</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_L5711065720501</td>
+						<td>FERRURE ETANCHE C46 D</td>
+						<td>L5711065720501</td>
+						<td>FERRURE ETANCHE C46 D_GM218_8K6</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>704</td>
+						<td>704</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>1408</td>
+					</tr>
+					<tr>
+						<td>R8318895</td>
+						<td>2017-01-25 09:31:45</td>
+						<td>2017-02-09 11:53:05</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-25 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-25 09:31:45</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711044500200</td>
+						<td>FERRURE BIELLE 1 EQ</td>
+						<td>V5711044500200</td>
+						<td>FERRURE BIELLE 1 EQ_GM218_8FV</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>4</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>4</td>
+						<td>0</td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>22R8392561</td>
+						<td>2017-02-17 11:21:00</td>
+						<td>2017-02-21 08:23:49</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-17 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-17 11:21:00</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_M2811342300000</td>
+						<td>TE VENT.</td>
+						<td>M2811342300000</td>
+						<td>TE VENT_GM218_8FV</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>7419384</td>
+						<td>2017-01-11 08:57:28</td>
+						<td>2017-01-17 10:26:12</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-01-11 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-01-11 08:57:28</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_L5711065720401</td>
+						<td>FERRURE ETANCHE C46 G</td>
+						<td>L5711065720401</td>
+						<td>FERRURE ETANCHE C46 G_GM218_8K6</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>704</td>
+						<td>704</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>1408</td>
+					</tr>
+					<tr>
+						<td>7251072</td>
+						<td>2016-11-22 17:25:14</td>
+						<td>2017-03-09 10:26:01</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-11-22 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-11-22 17:25:14</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713440120000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>D5713440120000</td>
+						<td>FERRURE DE COMP.</td>
+						<td>PCE</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>12</td>
+						<td>2017-03-17 23:59:59</td>
+						<td>12</td>
+						<td>0</td>
+						<td>12</td>
+						<td></td>
+						<td></td>
+						<td>231</td>
+						<td>231</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>2772</td>
+					</tr>
+					<tr>
+						<td>R8380373</td>
+						<td>2017-02-20 10:40:46</td>
+						<td>2017-02-21 08:24:23</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-20 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-20 10:40:46</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_L5331029700000</td>
+						<td>FER.BIELLE HZ C56</td>
+						<td>L5331029700000</td>
+						<td>FER.BIELLE HZ C56_GM8SE_MLN_OLD</td>
+						<td>PCE</td>
+						<td>2017-03-20 23:59:59</td>
+						<td>7</td>
+						<td>2017-03-20 23:59:59</td>
+						<td>7</td>
+						<td>0</td>
+						<td>7</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>6655370</td>
+						<td>2016-06-02 15:19:20</td>
+						<td>2017-02-23 10:47:27</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-06-02 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-06-02 15:19:20</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5392627500200</td>
+						<td>EQUIPPED BRACKET</td>
+						<td>V5392627500200</td>
+						<td>EQUIPPED BRACKET_GM2FE_8F5</td>
+						<td>PCE</td>
+						<td>2017-03-20 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-20 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>1132</td>
+						<td>1132</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>2264</td>
+					</tr>
+					<tr>
+						<td>R8400343</td>
+						<td>2017-02-21 14:40:07</td>
+						<td>2017-02-24 13:59:00</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-21 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-21 14:40:07</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713339720000</td>
+						<td>FERRURE DE COMP</td>
+						<td>D5713339720000</td>
+						<td>FERRURE DE COMP_GM8SE_MET</td>
+						<td>PCE</td>
+						<td>2017-03-21 23:59:59</td>
+						<td>50</td>
+						<td>2017-03-21 23:59:59</td>
+						<td>50</td>
+						<td>0</td>
+						<td>50</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8397110</td>
+						<td>2017-02-21 09:01:14</td>
+						<td>2017-02-24 13:58:59</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-21 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-21 09:01:14</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D2821065100000</td>
+						<td>ENS SUPPORT</td>
+						<td>D2821065100000</td>
+						<td>ENS SUPPORT_GM217_8AE</td>
+						<td>PCE</td>
+						<td>2017-03-21 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-21 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8119357</td>
+						<td>2016-10-17 14:17:45</td>
+						<td>2017-03-06 08:57:58</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-10-17 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-10-17 14:17:45</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_F5711084200000</td>
+						<td>BIELLE EQUIPEE</td>
+						<td>F5711084200000</td>
+						<td>BIELLE EQUIPEE_CRITIQUE_GM8SE_MCD</td>
+						<td>PCE</td>
+						<td>2017-03-21 23:59:59</td>
+						<td>6</td>
+						<td>2017-03-21 23:59:59</td>
+						<td>6</td>
+						<td>0</td>
+						<td>6</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8404329</td>
+						<td>2017-02-22 15:30:45</td>
+						<td>2017-02-24 13:59:01</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-22 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-22 15:30:45</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D5713204620102</td>
+						<td>FERRURE CADRE OBLIQ.</td>
+						<td>D5713204620102</td>
+						<td>FERRURE CADRE OBLIQ._GM218_8E5</td>
+						<td>PCE</td>
+						<td>2017-03-22 23:59:59</td>
+						<td>4</td>
+						<td>2017-03-22 23:59:59</td>
+						<td>4</td>
+						<td>0</td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8404159</td>
+						<td>2017-02-22 15:58:29</td>
+						<td>2017-02-23 10:22:15</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-22 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-22 15:58:29</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5392037800200</td>
+						<td>FERRURE VCRU EQ.</td>
+						<td>V5392037800200</td>
+						<td>FERRURE VCRU EQ._GM8SE_MEF</td>
+						<td>PCE</td>
+						<td>2017-03-22 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-22 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8404490</td>
+						<td>2017-02-23 08:32:56</td>
+						<td>2017-02-23 10:22:15</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-23 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-23 08:32:56</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5392037900200</td>
+						<td>FERRURE VCRU EQ.</td>
+						<td>V5392037900200</td>
+						<td>FERRURE VCRU EQ._GM8SE_MEF</td>
+						<td>PCE</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8388961</td>
+						<td>2017-02-20 13:26:08</td>
+						<td>2017-02-21 15:40:22</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-20 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-20 13:26:08</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711140520300</td>
+						<td>FERRURE RAIL C51-52 D</td>
+						<td>V5711140520300</td>
+						<td>FERRURE RAIL C51-52 D_GM8SE_MCF</td>
+						<td>PCE</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8389239</td>
+						<td>2017-02-20 13:28:08</td>
+						<td>2017-02-21 15:40:22</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-20 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-20 13:28:08</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711140520300</td>
+						<td>FERRURE RAIL C51-52 D</td>
+						<td>V5711140520300</td>
+						<td>FERRURE RAIL C51-52 D_GM8SE_MCF</td>
+						<td>PCE</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>3</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>3</td>
+						<td>0</td>
+						<td>3</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R7817279</td>
+						<td>2016-05-23 08:55:02</td>
+						<td>2017-03-09 15:15:37</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2016-05-23 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2016-05-23 08:55:02</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_F5791048200200</td>
+						<td>47-SUPPORT EQUIPE</td>
+						<td>F5791048200200</td>
+						<td>47-SUPPORT EQUIPE_GM8SE_MET</td>
+						<td>PCE</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-23 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>7511910</td>
+						<td>2017-02-02 09:44:40</td>
+						<td>2017-03-08 14:00:10</td>
+						<td>MANUAL</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-02 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-02 09:44:40</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_D2821059200000</td>
+						<td>SUPPORT EQUIPE</td>
+						<td>D2821059200000</td>
+						<td>SUPPORT EQUIPE</td>
+						<td>PCE</td>
+						<td>2017-03-24 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-24 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>169</td>
+						<td>169</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>338</td>
+					</tr>
+					<tr>
+						<td>R8399700</td>
+						<td>2017-02-23 09:35:54</td>
+						<td>2017-02-23 10:21:29</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-23 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-23 09:35:54</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711048220500</td>
+						<td>FERRURE COMPRESS 37D</td>
+						<td>V5711048220500</td>
+						<td>FERRURE COMPRESS 23D_GM218_8FV_NEW</td>
+						<td>PCE</td>
+						<td>2017-03-27 23:59:59</td>
+						<td>1</td>
+						<td>2017-03-27 23:59:59</td>
+						<td>1</td>
+						<td>0</td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8402808</td>
+						<td>2017-02-23 09:36:36</td>
+						<td>2017-02-23 10:22:16</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-23 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-23 09:36:36</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711007720000</td>
+						<td>CALE D'ETANCHEITE</td>
+						<td>V5711007720000</td>
+						<td>CALE D'ETANCHEITE_DI_GM8SE_MCD</td>
+						<td>PCE</td>
+						<td>2017-03-27 23:59:59</td>
+						<td>4</td>
+						<td>2017-03-27 23:59:59</td>
+						<td>4</td>
+						<td>0</td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>R8402985</td>
+						<td>2017-02-23 09:39:25</td>
+						<td>2017-02-23 10:22:16</td>
+						<td>REPAIR</td>
+						<td>286670</td>
+						<td>A_ Nts</td>
+						<td>Rue de l'aviation</td>
+						<td>44340</td>
+						<td>Bouguenais</td>
+						<td>FR</td>
+						<td>STA Aerospace</td>
+						<td>13 RUE MARIE LOUISE DISSART</td>
+						<td>31027</td>
+						<td>TOULOUSE CEDEX 3</td>
+						<td>FR</td>
+						<td>30 days end of month, due 10th following month</td>
+						<td>3010</td>
+						<td>2017-02-23 00:00:00</td>
+						<td>USD</td>
+						<td>286670</td>
+						<td>2017-02-23 09:39:25</td>
+						<td>10</td>
+						<td>OPEN</td>
+						<td>FR_V5711007820000</td>
+						<td>CALE D'ETANCHEITE</td>
+						<td>V5711007820000</td>
+						<td>CALE D'ETANCHEITE_DI_GM8SE_MCD</td>
+						<td>PCE</td>
+						<td>2017-03-27 23:59:59</td>
+						<td>2</td>
+						<td>2017-03-27 23:59:59</td>
+						<td>2</td>
+						<td>0</td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td>0</td>
+						<td>0</td>
+						<td>PCE</td>
+						<td>USD</td>
+						<td>0</td>
+					</tr>
+					
+                </tbody>
+                <tfoot>
+               <tr>
+						<th>PO</th>
+						<th>PO Header Pub. Date</th>
+						<th>PO Header Last Mod. Date</th>
+						<th>PO Document type</th>
+						<th>Supplier Local Number</th>
+						<th>Customer Name</th>
+						<th>Customer Street 1</th>
+						<th>Customer Zip</th>
+						<th>Customer City</th>
+						<th>Customer Countrycode</th>
+						<th>Supplier Name</th>
+						<th>Supplier Street 1</th>
+						<th>Supplier Zip</th>
+						<th>Supplier City</th>
+						<th>Supplier Countrycode</th>
+						<th>Payment terms</th>
+						<th>Payment terms code</th>
+						<th>ERP creation date</th>
+						<th>Currency</th>
+						<th>Supp. No.</th>
+						<th>PO Header Creation Date</th>
+						<th>PO Line</th>
+						<th>Status</th>
+						<th>Customer Material Number</th>
+						<th>Customer Material Description</th>
+						<th>Supplier Material Number</th>
+						<th>Supplier Material Description</th>
+						<th>Unit of Measure</th>
+						<th>Requested date</th>
+						<th>Requested quantity</th>
+						<th>Promised date</th>
+						<th>Promised quantity</th>
+						<th>Received Quantity</th>
+						<th>Remaining Quantity to be Received</th>
+						<th>Last GR Date</th>
+						<th>Last GR No.</th>
+						<th>Original Price</th>
+						<th>Price</th>
+						<th>Price unit of measure</th>
+						<th>Currency</th>
+						<th>Total Line Amount</th>
+					</tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
       <!-- /.row -->
     </section>
     <!-- /.content -->
@@ -443,6 +2156,58 @@
 <script src="dist/js/pages/dashboard2.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+      $('#example1').DataTable( {
+        "scrollX": true
+    } );
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+    
+   
+    
+    
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
