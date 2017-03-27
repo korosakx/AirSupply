@@ -38,13 +38,13 @@
                   <h3 class="box-title">Upload Purshase Order</h3>
             </div>
         <!-- Body boxes -->
-        <form role="form" action="UploadPoServlet" method="POST" enctype="multipart/form-data">
+        <form role="form" enctype="multipart/form-data">
             <div class="box-body">
                      <div class="form-group">
                  
-                  <label for="exampleInputFile">Choose file :</label>
+                  <label for="file">Choose file :</label>
                   
-                  <input type="file" name="fileName">
+                  <input type="file" name="file">
 
                   
                 </div>	
@@ -52,7 +52,7 @@
             
         <!-- Footer boxes -->
             <div class="box-footer">
-                <button type="submit" class="btn btn-primary" onclick="show_table()" value="Upload">Submit</button>
+                <button type="button" id="upload_btn" class="btn btn-primary" onclick="show_table()" value="Upload">Submit</button>
             </div>
        </form>
 
@@ -173,10 +173,53 @@
     
        <jsp:include page="pager/footer.jsp"/>
       <script>
-      function show_table() {
-        var elem = document.getElementById('table1');
-        elem.style.display = 'block';
-      }
+            function show_table() {
+              var elem = document.getElementById('table1');
+              elem.style.display = 'block';
+            }
+
+            $(':file').on('change', function() {
+            var file = this.files[0];
+            if (file.size > 1024) {
+                alert('max upload size is 1k');
+            }
+
+           // Also see .name, .type
+             });
+             
+    $('#upload_btn').on('click', function() {
+    $.ajax({
+        // Your server script to process the upload
+        url: 'UploadPoServlet',
+        type: 'POST',
+
+        // Form data
+        data: new FormData($('form')[0]),
+
+        // Tell jQuery not to process data or worry about content-type
+        // You *must* include these options!
+        cache: false,
+        contentType: false,
+        processData: false,
+
+        // Custom XMLHttpRequest
+        xhr: function() {
+            var myXhr = $.ajaxSettings.xhr();
+            if (myXhr.upload) {
+                // For handling the progress of the upload
+                myXhr.upload.addEventListener('progress', function(e) {
+                    if (e.lengthComputable) {
+                        $('progress').attr({
+                            value: e.loaded,
+                            max: e.total,
+                        });
+                    }
+                } , false);
+            }
+            return myXhr;
+        },
+    });
+});
     </script>
     </body>
 </html>

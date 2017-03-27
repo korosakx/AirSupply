@@ -98,7 +98,7 @@ private static final long serialVersionUID = 1L;
 
 
         ArrayList<String> xml = new  ArrayList<String>() ;
-
+        xml.add("<table>");
         try{
             // Creating Input Stream 
             FileInputStream myInput = new FileInputStream(file);
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 1L;
             Iterator<org.apache.poi.ss.usermodel.Row> rowIterator = sheet.iterator();
             while (rowIterator.hasNext()) 
            { if (i>1){
-               xml.add("<Fredj id=\""+i+"\">");
+               xml.add("<tr id=\""+i+"\">");
                 org.apache.poi.ss.usermodel.Row row = rowIterator.next();
                 //For each row, iterate through all the columns
                 Iterator<Cell> cellIterator = row.cellIterator();
@@ -126,19 +126,19 @@ private static final long serialVersionUID = 1L;
                     switch (cell.getCellType()) 
                     {
                         case Cell.CELL_TYPE_NUMERIC:
-                           xml.add("<Oussama>"+cell.getNumericCellValue()+"</Oussama>")  ;
+                           xml.add("<td>"+cell.getNumericCellValue()+"</td>")  ;
                             break;
                         case Cell.CELL_TYPE_STRING:
-                            xml.add("<Oussama>"+cell.getStringCellValue()+"</Oussama>")  ;
+                            xml.add("<td>"+cell.getStringCellValue()+"</td>")  ;
                             break;
                     }
                    
                 }
-               xml.add("</Fredj>"); 
+               xml.add("</tr>"); 
             }
            i++;
            }
-            
+            xml.add("</table>");
         } 
         catch (Exception e) 
         {
