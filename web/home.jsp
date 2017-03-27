@@ -9,7 +9,7 @@
 <html>
     <head>
         <jsp:include page="pager/header.jsp"/>
-        
+          <script type="text/JavaScript" src="js/fctxml.js"></script>
     </head>
     <body class="sidebar-mini fixed skin-blue-light" style="height: auto;">
        <jsp:include page="pager/menu.jsp"/>
@@ -38,13 +38,16 @@
                   <h3 class="box-title">Upload Purshase Order</h3>
             </div>
         <!-- Body boxes -->
+        
+
+        
         <form role="form" enctype="multipart/form-data">
             <div class="box-body">
                      <div class="form-group">
                  
                   <label for="file">Choose file :</label>
                   
-                  <input type="file" name="file">
+                  <input id="sampleFile" type="file" name="file">
 
                   
                 </div>	
@@ -52,7 +55,7 @@
             
         <!-- Footer boxes -->
             <div class="box-footer">
-                <button type="button" id="upload_btn" class="btn btn-primary" onclick="show_table()" value="Upload">Submit</button>
+                <button type="button" id="uploadBtn" class="btn btn-primary" onclick="performAjaxSubmit();" value="Upload">Submit</button>
             </div>
        </form>
 
@@ -60,7 +63,7 @@
    </section>
        <!-- End Second section --> 
        
-       <section id="table1" class="content" style="display:none;" >
+       <section id="table1" class="content"  >
       <!-- Tableau -->
         <div class="box box-primary">
             <div class="box-header">
@@ -116,7 +119,7 @@
                         
                     </thead>    
                     
-                    <tbody>
+                    <tbody id="body1">
                         
                     </tbody>
                     
@@ -178,48 +181,156 @@
               elem.style.display = 'block';
             }
 
-            $(':file').on('change', function() {
-            var file = this.files[0];
-            if (file.size > 1024) {
-                alert('max upload size is 1k');
-            }
-
-           // Also see .name, .type
-             });
+           
              
-    $('#upload_btn').on('click', function() {
-    $.ajax({
-        // Your server script to process the upload
-        url: 'UploadPoServlet',
-        type: 'POST',
+    /**
+ * Méthode qui retourne l'objet XMLHttpRequest en fonction du navigateur.
+ */
+function getXMLHttpRequest()
+	{
+	var xhr = null;
 
-        // Form data
-        data: new FormData($('form')[0]),
+	// Firefox et bien d'autres.
+	if (window.XMLHttpRequest)
+		xhr = new XMLHttpRequest();
+	else
 
-        // Tell jQuery not to process data or worry about content-type
-        // You *must* include these options!
-        cache: false,
-        contentType: false,
-        processData: false,
+	// Internet Explorer.
+	if (window.ActiveXObject)
+		{
+		try	{
+			xhr = new ActiveXObject("Msxml2.XMLHTTP");
+			}
+		catch (e)
+			{
+			xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		}
 
-        // Custom XMLHttpRequest
-        xhr: function() {
-            var myXhr = $.ajaxSettings.xhr();
-            if (myXhr.upload) {
-                // For handling the progress of the upload
-                myXhr.upload.addEventListener('progress', function(e) {
-                    if (e.lengthComputable) {
-                        $('progress').attr({
-                            value: e.loaded,
-                            max: e.total,
-                        });
-                    }
-                } , false);
+	// XMLHttpRequest non supporté.
+	else
+		{
+		alert("Votre navigateur ne supporte pas l'objet XmlHttpRequest.");
+		xhr = false;
+		}
+
+	return xhr;
+	}
+
+
+/**
+ * Cette méthode "Ajax" affiche le XML.
+ *
+ * On utilise la propriété 'responseText' de l'objet XMLHttpRequest afin
+ * de récupérer sous forme de texte le flux envoyé par le serveur.
+ */
+function afficheXML ()
+	{
+	// Objet XMLHttpRequest.
+	var xhr = getXMLHttpRequest();
+
+	// On précise ce que l'on va faire quand on aura reçu la réponse du serveur.
+	xhr.onreadystatechange = function()
+		{
+		// Si l'on a tout reçu et que la requête http s'est bien passée.
+		if (xhr.readyState === 4 && xhr.status === 200)
+			{
+			// Elément html que l'on va mettre à jour.
+			var elt = document.getElementById("zone");
+			alert(xhr.responseText);
+			}
+		};
+
+	// Requête au serveur avec les paramètres éventuels.
+        var file = this.files;
+        var formData = new FormData();
+        formData.append("file", file);
+	xhr.open("POST","UploadServlet",true);
+	xhr.send(formData);
+	}
+
+
+/**
+ * Cette méthode "Ajax" affiche la liste des auteurs.
+ *
+ * On utilise la propriété 'responseXML' de l'objet XMLHttpRequest afin
+ * de récupérer sous forme d'arbre DOM le document XML envoyé par le serveur.
+ *
+
+
+/**
+ * Cette méthode "Ajax" permet de tester les paramètres passés par l'url.
+ */
+function testEncodeUrl ()
+	{
+	// Objet XMLHttpRequest.
+	var xhr = getXMLHttpRequest();
+
+	// On précise ce que l'on va faire quand on aura reçu la réponse du serveur.
+	xhr.onreadystatechange = function()
+		{
+		// Si l'on a tout reçu et que la requête http s'est bien passée.
+		if (xhr.readyState === 4 && xhr.status === 200)
+			{
+			// Elément html que l'on va mettre à jour.
+			document.getElementById("recue").value = xhr.responseXML.getElementsByTagName("msg")[0].firstChild.nodeValue ;
+			}
+		};
+
+	// Requête au serveur avec les paramètres éventuels.
+	var param = "texte=" + encodeURIComponent(document.getElementById("envoie").value);
+	var url = "ServletEncode";
+	alert(url + "?" + param);
+
+	xhr.open("POST",url,true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send(param);
+	}
+
+
+
+    function performAjaxSubmit() {
+
+        var sampleFile = document.getElementById("sampleFile").files[0];
+
+        var formdata = new FormData();
+
+        formdata.append("sampleFile", sampleFile);
+
+        var xhr = new XMLHttpRequest();       
+
+        xhr.open("POST","UploadPoServlet", true);
+
+        xhr.send(formdata);
+
+        xhr.onload = function(e) {
+
+            if (this.status == 200) {
+                var s ="";
+                var e = xhr.responseXML.getElementsByTagName("tr");
+                for (var i=0 ; i < e.length ; i++){
+                s+= "<tr>";    
+                var e2 = e[i].getElementsByTagName("td");
+                    for (var j=0 ; j < e2.length ; j++){
+                        s+= "<td>"; 
+                        if (e2[j].firstChild.nodeValue != null){
+                            
+                        s+= e2[j].firstChild.nodeValue;
+                        }
+                        s+= "</td>"; 
+                }
+                s+= "</tr>"; 
             }
-            return myXhr;
-        },
-    });
-});
+               alert(s);
+               var body = document.getElementById("body1");
+               body.innerHTML =s;
+            }
+
+        };                    
+
+    }   
+
+</script>
     </script>
     </body>
 </html>

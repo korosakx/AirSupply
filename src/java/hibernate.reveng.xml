@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="db_21511543"/>
+  <table-filter match-name="PO"/>
+  <table-filter match-name="PREFERENCE"/>
+  <table-filter match-name="PO_LINE"/>
+  <table-filter match-name="VMI"/>
+  <table-filter match-name="PRODUCT"/>
+  <table-filter match-name="ROLE"/>
+  <table-filter match-name="PERMISSION"/>
+  <table-filter match-name="USER"/>
+  <table-filter match-name="SUPPLIER"/>
+  <table-filter match-name="POSSESS"/>
+  <table-filter match-name="PREV_DELIV"/>
+  <table-filter match-name="SHIPPING_ADRESS"/>
+  <table-filter match-name="MODULE"/>
+  <table-filter match-name="STATUS_STOCK"/>
+  <table-filter match-name="PREV_CONSUM"/>
+  <table-filter match-name="CONTAIN"/>
+  <table-filter match-name="CUSTOMER"/>
+</hibernate-reverse-engineering>

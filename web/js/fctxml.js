@@ -52,13 +52,16 @@ function afficheXML ()
 			{
 			// Elément html que l'on va mettre à jour.
 			var elt = document.getElementById("zone");
-			elt.innerHTML = xhr.responseText;
+			alert(xhr.responseText);
 			}
 		};
 
 	// Requête au serveur avec les paramètres éventuels.
-	xhr.open("GET","ServletAuteur",true);
-	xhr.send(null);
+        var file = this.files[0];
+        var formData = new FormData();
+        formData.append("thefile", file);
+	xhr.open("POST","UploadServlet",true);
+	xhr.send(formData);
 	}
 
 
@@ -67,29 +70,7 @@ function afficheXML ()
  *
  * On utilise la propriété 'responseXML' de l'objet XMLHttpRequest afin
  * de récupérer sous forme d'arbre DOM le document XML envoyé par le serveur.
- */
-function l_auteurs ()
-	{
-	}
-
-
-/**
- * Cette méthode "Ajax" affiche la liste des citations.
  *
- * On utilise la propriété 'responseXML' de l'objet XMLHttpRequest afin
- * de récupérer sous forme d'arbre DOM le document XML envoyé par le serveur.
- */
-function l_citations ()
-	{
-	}
-
-
-/**
- * Cette méthode "Ajax" simule la zone de recherche 'Google'.
- */
-function processKey ()
-	{
-	}
 
 
 /**

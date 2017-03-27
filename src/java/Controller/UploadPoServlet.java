@@ -123,6 +123,7 @@ private static final long serialVersionUID = 1L;
                 { 
                     Cell cell = cellIterator.next();
                     //Check the cell type and format accordingly
+                   
                     switch (cell.getCellType()) 
                     {
                         case Cell.CELL_TYPE_NUMERIC:
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 1L;
                         case Cell.CELL_TYPE_STRING:
                             xml.add("<td>"+cell.getStringCellValue()+"</td>")  ;
                             break;
+               
                     }
                    
                 }
