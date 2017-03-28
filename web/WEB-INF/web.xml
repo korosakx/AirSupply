@@ -4,17 +4,25 @@
         <servlet-name>Controllers</servlet-name>
         <servlet-class>TEST.Controllers</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HistoryVisualisation</servlet-name>
+        <servlet-class>Controller.historyPO.HistoryVisualisation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HistoryVisual</servlet-name>
+        <servlet-class>Controller.historyPO.HistoryVisual</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controllers</servlet-name>
         <url-pattern>/Controllers</url-pattern>
     </servlet-mapping>
-      <servlet>
-        <servlet-name>HistoryVisualisation</servlet-name>
-        <servlet-class>TEST.Controllers</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>HistoryVisualisation</servlet-name>
         <url-pattern>/HistoryVisualisation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HistoryVisual</servlet-name>
+        <url-pattern>/HistoryVisual</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
