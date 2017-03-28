@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,18 +13,18 @@ import javax.persistence.Embeddable;
 public class PoLineId  implements java.io.Serializable {
 
 
-     private String po;
-     private int id;
+     private String numPo;
+     private int idProduct;
      private int idUser;
      private Date dateModif;
-     private int poLine;
+     private String poLine;
 
     public PoLineId() {
     }
 
-    public PoLineId(String po, int id, int idUser, Date dateModif, int poLine) {
-       this.po = po;
-       this.id = id;
+    public PoLineId(String numPo, int idProduct, int idUser, Date dateModif, String poLine) {
+       this.numPo = numPo;
+       this.idProduct = idProduct;
        this.idUser = idUser;
        this.dateModif = dateModif;
        this.poLine = poLine;
@@ -32,23 +32,23 @@ public class PoLineId  implements java.io.Serializable {
    
 
 
-    @Column(name="PO", nullable=false, length=32)
-    public String getPo() {
-        return this.po;
+    @Column(name="NUM_PO", nullable=false, length=32)
+    public String getNumPo() {
+        return this.numPo;
     }
     
-    public void setPo(String po) {
-        this.po = po;
+    public void setNumPo(String numPo) {
+        this.numPo = numPo;
     }
 
 
-    @Column(name="ID", nullable=false)
-    public int getId() {
-        return this.id;
+    @Column(name="ID_PRODUCT", nullable=false)
+    public int getIdProduct() {
+        return this.idProduct;
     }
     
-    public void setId(int id) {
-        this.id = id;
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
     }
 
 
@@ -72,12 +72,12 @@ public class PoLineId  implements java.io.Serializable {
     }
 
 
-    @Column(name="PO_LINE", nullable=false)
-    public int getPoLine() {
+    @Column(name="PO_LINE", nullable=false, length=32)
+    public String getPoLine() {
         return this.poLine;
     }
     
-    public void setPoLine(int poLine) {
+    public void setPoLine(String poLine) {
         this.poLine = poLine;
     }
 
@@ -88,21 +88,21 @@ public class PoLineId  implements java.io.Serializable {
 		 if ( !(other instanceof PoLineId) ) return false;
 		 PoLineId castOther = ( PoLineId ) other; 
          
-		 return ( (this.getPo()==castOther.getPo()) || ( this.getPo()!=null && castOther.getPo()!=null && this.getPo().equals(castOther.getPo()) ) )
- && (this.getId()==castOther.getId())
+		 return ( (this.getNumPo()==castOther.getNumPo()) || ( this.getNumPo()!=null && castOther.getNumPo()!=null && this.getNumPo().equals(castOther.getNumPo()) ) )
+ && (this.getIdProduct()==castOther.getIdProduct())
  && (this.getIdUser()==castOther.getIdUser())
  && ( (this.getDateModif()==castOther.getDateModif()) || ( this.getDateModif()!=null && castOther.getDateModif()!=null && this.getDateModif().equals(castOther.getDateModif()) ) )
- && (this.getPoLine()==castOther.getPoLine());
+ && ( (this.getPoLine()==castOther.getPoLine()) || ( this.getPoLine()!=null && castOther.getPoLine()!=null && this.getPoLine().equals(castOther.getPoLine()) ) );
    }
    
    public int hashCode() {
          int result = 17;
          
-         result = 37 * result + ( getPo() == null ? 0 : this.getPo().hashCode() );
-         result = 37 * result + this.getId();
+         result = 37 * result + ( getNumPo() == null ? 0 : this.getNumPo().hashCode() );
+         result = 37 * result + this.getIdProduct();
          result = 37 * result + this.getIdUser();
          result = 37 * result + ( getDateModif() == null ? 0 : this.getDateModif().hashCode() );
-         result = 37 * result + this.getPoLine();
+         result = 37 * result + ( getPoLine() == null ? 0 : this.getPoLine().hashCode() );
          return result;
    }   
 

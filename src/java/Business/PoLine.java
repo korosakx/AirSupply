@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -72,11 +72,11 @@ public class PoLine  implements java.io.Serializable {
 
     
     @AttributeOverrides( {
-        @AttributeOverride(name="po", column=@Column(name="PO", nullable=false, length=32) ), 
-        @AttributeOverride(name="id", column=@Column(name="ID", nullable=false) ), 
+        @AttributeOverride(name="numPo", column=@Column(name="NUM_PO", nullable=false, length=32) ), 
+        @AttributeOverride(name="idProduct", column=@Column(name="ID_PRODUCT", nullable=false) ), 
         @AttributeOverride(name="idUser", column=@Column(name="ID_USER", nullable=false) ), 
         @AttributeOverride(name="dateModif", column=@Column(name="DATE_MODIF", nullable=false, length=19) ), 
-        @AttributeOverride(name="poLine", column=@Column(name="PO_LINE", nullable=false) ) } )
+        @AttributeOverride(name="poLine", column=@Column(name="PO_LINE", nullable=false, length=32) ) } )
     public PoLineId getId() {
         return this.id;
     }
@@ -86,7 +86,7 @@ public class PoLine  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="PO", nullable=false, insertable=false, updatable=false)
+    @JoinColumn(name="NUM_PO", nullable=false, insertable=false, updatable=false)
     public Po getPo() {
         return this.po;
     }
@@ -96,7 +96,7 @@ public class PoLine  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID", nullable=false, insertable=false, updatable=false)
+    @JoinColumn(name="ID_PRODUCT", nullable=false, insertable=false, updatable=false)
     public Product getProduct() {
         return this.product;
     }

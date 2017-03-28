@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -73,7 +73,7 @@ public class User  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID_CUSTOMER")
+    @JoinColumn(name="NAME_CUSTOMER")
     public Customer getCustomer() {
         return this.customer;
     }

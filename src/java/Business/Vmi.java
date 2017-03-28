@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -78,8 +78,8 @@ public class Vmi  implements java.io.Serializable {
 
     
     @AttributeOverrides( {
-        @AttributeOverride(name="idVmi", column=@Column(name="ID_VMI", nullable=false) ), 
-        @AttributeOverride(name="vmiRf", column=@Column(name="VMI_RF", nullable=false) ) } )
+        @AttributeOverride(name="idVmi", column=@Column(name="ID_VMI", nullable=false, length=128) ), 
+        @AttributeOverride(name="vmiRf", column=@Column(name="VMI_RF", nullable=false, length=128) ) } )
     public VmiId getId() {
         return this.id;
     }
@@ -89,7 +89,7 @@ public class Vmi  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID_CUSTOMER", nullable=false)
+    @JoinColumn(name="NAME_CUSTOMER", nullable=false)
     public Customer getCustomer() {
         return this.customer;
     }
@@ -99,7 +99,7 @@ public class Vmi  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID", nullable=false)
+    @JoinColumn(name="ID_PRODUCT", nullable=false)
     public Product getProduct() {
         return this.product;
     }

@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -23,7 +23,7 @@ import javax.persistence.Table;
 public class Product  implements java.io.Serializable {
 
 
-     private int id;
+     private int idProduct;
      private Customer customer;
      private Supplier supplier;
      private String unit;
@@ -38,13 +38,13 @@ public class Product  implements java.io.Serializable {
     }
 
 	
-    public Product(int id, Customer customer, Supplier supplier) {
-        this.id = id;
+    public Product(int idProduct, Customer customer, Supplier supplier) {
+        this.idProduct = idProduct;
         this.customer = customer;
         this.supplier = supplier;
     }
-    public Product(int id, Customer customer, Supplier supplier, String unit, String refSupplier, String descSupplier, String refCustomer, String descCustomer, Set<PoLine> poLines, Set<Vmi> vmis) {
-       this.id = id;
+    public Product(int idProduct, Customer customer, Supplier supplier, String unit, String refSupplier, String descSupplier, String refCustomer, String descCustomer, Set<PoLine> poLines, Set<Vmi> vmis) {
+       this.idProduct = idProduct;
        this.customer = customer;
        this.supplier = supplier;
        this.unit = unit;
@@ -59,17 +59,17 @@ public class Product  implements java.io.Serializable {
      @Id 
 
     
-    @Column(name="ID", unique=true, nullable=false)
-    public int getId() {
-        return this.id;
+    @Column(name="ID_PRODUCT", unique=true, nullable=false)
+    public int getIdProduct() {
+        return this.idProduct;
     }
     
-    public void setId(int id) {
-        this.id = id;
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID_CUSTOMER", nullable=false)
+    @JoinColumn(name="NAME_CUSTOMER", nullable=false)
     public Customer getCustomer() {
         return this.customer;
     }

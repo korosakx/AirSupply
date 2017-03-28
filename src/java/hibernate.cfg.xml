@@ -49,24 +49,24 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
-    <mapping class="Business.Module"/>
-    <mapping class="Business.User"/>
+    <mapping class="Business.PrevConsum"/>
+    <mapping class="Business.StatusStockId"/>
     <mapping class="Business.Vmi"/>
-    <mapping class="Business.Permission"/>
+    <mapping class="Business.Supplier"/>
+    <mapping class="Business.User"/>
+    <mapping class="Business.PoLine"/>
     <mapping class="Business.StatusStock"/>
     <mapping class="Business.Customer"/>
-    <mapping class="Business.Po"/>
-    <mapping class="Business.PrevDeliv"/>
-    <mapping class="Business.PrevDelivId"/>
-    <mapping class="Business.Supplier"/>
-    <mapping class="Business.Product"/>
-    <mapping class="Business.VmiId"/>
-    <mapping class="Business.StatusStockId"/>
-    <mapping class="Business.PoLineId"/>
     <mapping class="Business.Role"/>
-    <mapping class="Business.PoLine"/>
+    <mapping class="Business.PrevDeliv"/>
+    <mapping class="Business.Permission"/>
+    <mapping class="Business.VmiId"/>
+    <mapping class="Business.PrevDelivId"/>
     <mapping class="Business.ShippingAdress"/>
+    <mapping class="Business.Product"/>
+    <mapping class="Business.Module"/>
+    <mapping class="Business.Po"/>
+    <mapping class="Business.PoLineId"/>
     <mapping class="Business.PrevConsumId"/>
-    <mapping class="Business.PrevConsum"/>
   </session-factory>
 </hibernate-configuration>

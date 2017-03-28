@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -21,7 +21,6 @@ import javax.persistence.Table;
 public class Customer  implements java.io.Serializable {
 
 
-     private long idCustomer;
      private String nameCustomer;
      private String streetCustomer;
      private String zipCustomer;
@@ -36,11 +35,10 @@ public class Customer  implements java.io.Serializable {
     }
 
 	
-    public Customer(long idCustomer) {
-        this.idCustomer = idCustomer;
+    public Customer(String nameCustomer) {
+        this.nameCustomer = nameCustomer;
     }
-    public Customer(long idCustomer, String nameCustomer, String streetCustomer, String zipCustomer, String cityCustomer, String countryCustomer, Set<Po> pos, Set<User> users, Set<Product> products, Set<Vmi> vmis) {
-       this.idCustomer = idCustomer;
+    public Customer(String nameCustomer, String streetCustomer, String zipCustomer, String cityCustomer, String countryCustomer, Set<Po> pos, Set<User> users, Set<Product> products, Set<Vmi> vmis) {
        this.nameCustomer = nameCustomer;
        this.streetCustomer = streetCustomer;
        this.zipCustomer = zipCustomer;
@@ -55,17 +53,7 @@ public class Customer  implements java.io.Serializable {
      @Id 
 
     
-    @Column(name="ID_CUSTOMER", unique=true, nullable=false)
-    public long getIdCustomer() {
-        return this.idCustomer;
-    }
-    
-    public void setIdCustomer(long idCustomer) {
-        this.idCustomer = idCustomer;
-    }
-
-    
-    @Column(name="NAME_CUSTOMER", length=32)
+    @Column(name="NAME_CUSTOMER", unique=true, nullable=false, length=32)
     public String getNameCustomer() {
         return this.nameCustomer;
     }

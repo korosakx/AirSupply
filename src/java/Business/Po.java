@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -26,7 +26,7 @@ import javax.persistence.TemporalType;
 public class Po  implements java.io.Serializable {
 
 
-     private String po;
+     private String numPo;
      private Customer customer;
      private Supplier supplier;
      private Date creationDate;
@@ -41,13 +41,13 @@ public class Po  implements java.io.Serializable {
     }
 
 	
-    public Po(String po, Customer customer, Supplier supplier) {
-        this.po = po;
+    public Po(String numPo, Customer customer, Supplier supplier) {
+        this.numPo = numPo;
         this.customer = customer;
         this.supplier = supplier;
     }
-    public Po(String po, Customer customer, Supplier supplier, Date creationDate, Date erpCreationDate, String currency, String documentType, String codeTermPay, String descTermPay, Set<PoLine> poLines) {
-       this.po = po;
+    public Po(String numPo, Customer customer, Supplier supplier, Date creationDate, Date erpCreationDate, String currency, String documentType, String codeTermPay, String descTermPay, Set<PoLine> poLines) {
+       this.numPo = numPo;
        this.customer = customer;
        this.supplier = supplier;
        this.creationDate = creationDate;
@@ -62,17 +62,17 @@ public class Po  implements java.io.Serializable {
      @Id 
 
     
-    @Column(name="PO", unique=true, nullable=false, length=32)
-    public String getPo() {
-        return this.po;
+    @Column(name="NUM_PO", unique=true, nullable=false, length=32)
+    public String getNumPo() {
+        return this.numPo;
     }
     
-    public void setPo(String po) {
-        this.po = po;
+    public void setNumPo(String numPo) {
+        this.numPo = numPo;
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ID_CUSTOMER", nullable=false)
+    @JoinColumn(name="NAME_CUSTOMER", nullable=false)
     public Customer getCustomer() {
         return this.customer;
     }

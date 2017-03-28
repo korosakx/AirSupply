@@ -263,7 +263,7 @@
           </a>
           <ul class="treeview-menu" style="display: none;">
             <li><a href="#"><i class="fa fa-circle-o"></i>PO Upload</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Negociations</a></li>
+            <li><a href="Negociations.jsp"><i class="fa fa-circle-o"></i>Negociations</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>History</a></li>
           </ul>
         </li>

@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import javax.persistence.AttributeOverride;
@@ -46,8 +46,8 @@ public class PrevConsum  implements java.io.Serializable {
     
     @AttributeOverrides( {
         @AttributeOverride(name="datePrevConsume", column=@Column(name="DATE_PREV_CONSUME", nullable=false, length=19) ), 
-        @AttributeOverride(name="idVmi", column=@Column(name="ID_VMI", nullable=false) ), 
-        @AttributeOverride(name="vmiRf", column=@Column(name="VMI_RF", nullable=false) ) } )
+        @AttributeOverride(name="idVmi", column=@Column(name="ID_VMI", nullable=false, length=128) ), 
+        @AttributeOverride(name="vmiRf", column=@Column(name="VMI_RF", nullable=false, length=128) ) } )
     public PrevConsumId getId() {
         return this.id;
     }

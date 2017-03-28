@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,14 +13,14 @@ import javax.persistence.Embeddable;
 public class StatusStockId  implements java.io.Serializable {
 
 
-     private int idVmi;
-     private int vmiRf;
+     private String idVmi;
+     private String vmiRf;
      private Date dateStatusStock;
 
     public StatusStockId() {
     }
 
-    public StatusStockId(int idVmi, int vmiRf, Date dateStatusStock) {
+    public StatusStockId(String idVmi, String vmiRf, Date dateStatusStock) {
        this.idVmi = idVmi;
        this.vmiRf = vmiRf;
        this.dateStatusStock = dateStatusStock;
@@ -28,22 +28,22 @@ public class StatusStockId  implements java.io.Serializable {
    
 
 
-    @Column(name="ID_VMI", nullable=false)
-    public int getIdVmi() {
+    @Column(name="ID_VMI", nullable=false, length=128)
+    public String getIdVmi() {
         return this.idVmi;
     }
     
-    public void setIdVmi(int idVmi) {
+    public void setIdVmi(String idVmi) {
         this.idVmi = idVmi;
     }
 
 
-    @Column(name="VMI_RF", nullable=false)
-    public int getVmiRf() {
+    @Column(name="VMI_RF", nullable=false, length=128)
+    public String getVmiRf() {
         return this.vmiRf;
     }
     
-    public void setVmiRf(int vmiRf) {
+    public void setVmiRf(String vmiRf) {
         this.vmiRf = vmiRf;
     }
 
@@ -64,16 +64,16 @@ public class StatusStockId  implements java.io.Serializable {
 		 if ( !(other instanceof StatusStockId) ) return false;
 		 StatusStockId castOther = ( StatusStockId ) other; 
          
-		 return (this.getIdVmi()==castOther.getIdVmi())
- && (this.getVmiRf()==castOther.getVmiRf())
+		 return ( (this.getIdVmi()==castOther.getIdVmi()) || ( this.getIdVmi()!=null && castOther.getIdVmi()!=null && this.getIdVmi().equals(castOther.getIdVmi()) ) )
+ && ( (this.getVmiRf()==castOther.getVmiRf()) || ( this.getVmiRf()!=null && castOther.getVmiRf()!=null && this.getVmiRf().equals(castOther.getVmiRf()) ) )
  && ( (this.getDateStatusStock()==castOther.getDateStatusStock()) || ( this.getDateStatusStock()!=null && castOther.getDateStatusStock()!=null && this.getDateStatusStock().equals(castOther.getDateStatusStock()) ) );
    }
    
    public int hashCode() {
          int result = 17;
          
-         result = 37 * result + this.getIdVmi();
-         result = 37 * result + this.getVmiRf();
+         result = 37 * result + ( getIdVmi() == null ? 0 : this.getIdVmi().hashCode() );
+         result = 37 * result + ( getVmiRf() == null ? 0 : this.getVmiRf().hashCode() );
          result = 37 * result + ( getDateStatusStock() == null ? 0 : this.getDateStatusStock().hashCode() );
          return result;
    }   

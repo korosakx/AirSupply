@@ -1,5 +1,5 @@
 package Business;
-// Generated 27 mars 2017 14:41:47 by Hibernate Tools 4.3.1
+// Generated 28 mars 2017 12:22:06 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -21,7 +21,7 @@ import javax.persistence.Table;
 public class Supplier  implements java.io.Serializable {
 
 
-     private int idSupplier;
+     private String idSupplier;
      private String nameSupplier;
      private String streetSupplier;
      private String zipSupplier;
@@ -36,10 +36,10 @@ public class Supplier  implements java.io.Serializable {
     }
 
 	
-    public Supplier(int idSupplier) {
+    public Supplier(String idSupplier) {
         this.idSupplier = idSupplier;
     }
-    public Supplier(int idSupplier, String nameSupplier, String streetSupplier, String zipSupplier, String citySupplier, String countrySupplier, Set<Po> pos, Set<User> users, Set<Vmi> vmis, Set<Product> products) {
+    public Supplier(String idSupplier, String nameSupplier, String streetSupplier, String zipSupplier, String citySupplier, String countrySupplier, Set<Po> pos, Set<User> users, Set<Vmi> vmis, Set<Product> products) {
        this.idSupplier = idSupplier;
        this.nameSupplier = nameSupplier;
        this.streetSupplier = streetSupplier;
@@ -55,12 +55,12 @@ public class Supplier  implements java.io.Serializable {
      @Id 
 
     
-    @Column(name="ID_SUPPLIER", unique=true, nullable=false)
-    public int getIdSupplier() {
+    @Column(name="ID_SUPPLIER", unique=true, nullable=false, length=32)
+    public String getIdSupplier() {
         return this.idSupplier;
     }
     
-    public void setIdSupplier(int idSupplier) {
+    public void setIdSupplier(String idSupplier) {
         this.idSupplier = idSupplier;
     }
 
