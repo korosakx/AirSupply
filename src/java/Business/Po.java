@@ -4,6 +4,7 @@ package Business;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -61,10 +62,72 @@ public class Po  implements java.io.Serializable {
    
      @Id 
 
+     
     
     @Column(name="NUM_PO", unique=true, nullable=false, length=32)
     public String getNumPo() {
         return this.numPo;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + Objects.hashCode(this.numPo);
+        hash = 71 * hash + Objects.hashCode(this.customer);
+        hash = 71 * hash + Objects.hashCode(this.supplier);
+        hash = 71 * hash + Objects.hashCode(this.creationDate);
+        hash = 71 * hash + Objects.hashCode(this.erpCreationDate);
+        hash = 71 * hash + Objects.hashCode(this.currency);
+        hash = 71 * hash + Objects.hashCode(this.documentType);
+        hash = 71 * hash + Objects.hashCode(this.codeTermPay);
+        hash = 71 * hash + Objects.hashCode(this.descTermPay);
+        hash = 71 * hash + Objects.hashCode(this.poLines);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Po other = (Po) obj;
+        if (!Objects.equals(this.numPo, other.numPo)) {
+            return false;
+        }
+        if (!Objects.equals(this.currency, other.currency)) {
+            return false;
+        }
+        if (!Objects.equals(this.documentType, other.documentType)) {
+            return false;
+        }
+        if (!Objects.equals(this.codeTermPay, other.codeTermPay)) {
+            return false;
+        }
+        if (!Objects.equals(this.descTermPay, other.descTermPay)) {
+            return false;
+        }
+        if (!Objects.equals(this.customer, other.customer)) {
+            return false;
+        }
+        if (!Objects.equals(this.supplier, other.supplier)) {
+            return false;
+        }
+        if (!Objects.equals(this.creationDate, other.creationDate)) {
+            return false;
+        }
+        if (!Objects.equals(this.erpCreationDate, other.erpCreationDate)) {
+            return false;
+        }
+        if (!Objects.equals(this.poLines, other.poLines)) {
+            return false;
+        }
+        return true;
     }
     
     public void setNumPo(String numPo) {

@@ -8,6 +8,14 @@
         <servlet-name>Controllers</servlet-name>
         <url-pattern>/Controllers</url-pattern>
     </servlet-mapping>
+      <servlet>
+        <servlet-name>HistoryVisualisation</servlet-name>
+        <servlet-class>TEST.Controllers</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HistoryVisualisation</servlet-name>
+        <url-pattern>/HistoryVisualisation</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
