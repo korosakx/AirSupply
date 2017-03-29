@@ -215,6 +215,11 @@ public class PoLine  implements java.io.Serializable {
         this.promiseDate = promiseDate;
     }
 
+    @Override
+    public String toString() {
+        return "PoLine{" + "id=" + id + ", po=" + po + ", product=" + product + ", user=" + user + ", quantityRequest=" + quantityRequest + ", quantityPromised=" + quantityPromised + ", quantityReceived=" + quantityReceived + ", unitPrice=" + unitPrice + ", totalPrice=" + totalPrice + ", unitPriceOriginal=" + unitPriceOriginal + ", lineComment=" + lineComment + ", status=" + status + ", requestDate=" + requestDate + ", promiseDate=" + promiseDate + '}';
+    }
+
 
 
 

@@ -6,6 +6,9 @@
 package Controller.HistoryPO;
 
 import Business.MethodesUtilBd;
+import Business.PoLine;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -20,7 +23,7 @@ public class NewMain {
     {
         // TODO code application logic here
         MethodesUtilBd bd=new MethodesUtilBd();
-        bd.GetPos(2);
+        HashMap<Integer,ArrayList<PoLine>> list=bd.GetPos(2);
         
     }
     
