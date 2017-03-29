@@ -41,10 +41,32 @@ Contributor(s):
 -->
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/sample</property>
-    <property name="hibernate.connection.username">app</property>
-    <property name="hibernate.connection.password">app</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://sip-web.ut-capitole.fr:3306/db_21511543</property>
+    <property name="hibernate.connection.username">21511543</property>
+    <property name="hibernate.connection.password">00281U</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping class="Business.PrevConsum"/>
+    <mapping class="Business.StatusStockId"/>
+    <mapping class="Business.Vmi"/>
+    <mapping class="Business.Supplier"/>
+    <mapping class="Business.User"/>
+    <mapping class="Business.PoLine"/>
+    <mapping class="Business.StatusStock"/>
+    <mapping class="Business.Customer"/>
+    <mapping class="Business.Role"/>
+    <mapping class="Business.PrevDeliv"/>
+    <mapping class="Business.Permission"/>
+    <mapping class="Business.VmiId"/>
+    <mapping class="Business.PrevDelivId"/>
+    <mapping class="Business.ShippingAdress"/>
+    <mapping class="Business.Product"/>
+    <mapping class="Business.Module"/>
+    <mapping class="Business.Po"/>
+    <mapping class="Business.PoLineId"/>
+    <mapping class="Business.PrevConsumId"/>
   </session-factory>
 </hibernate-configuration>
